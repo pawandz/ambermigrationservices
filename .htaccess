@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^(.*)\.html$ $1.php [L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+ 
+
+
+ 
