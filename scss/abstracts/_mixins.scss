@@ -10,7 +10,7 @@
 @mixin hover {
   @media (hover: hover) and (pointer: fine) { &:hover { @content; } }
 }
-@mixin focus-ring($offset: 3px, $color: var(--c-amber)) {
+@mixin focus-ring($offset: 3px, $color: var(--c-red)) {
   &:focus-visible { outline: 2px solid $color; outline-offset: $offset; }
 }
 @mixin visually-hidden {

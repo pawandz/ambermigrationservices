@@ -2,19 +2,20 @@
 // Design tokens – single source of truth for colour, type, space & motion
 // ==========================================================================
 
-// Brand palette
-$navy: #101E32;
-$navy-800: #17283F;
-$navy-700: #22354F;
-$amber: #D99A35;
-$amber-600: #C4862A;
-$amber-ink: #8A5A12;      // amber for text on light backgrounds (AA contrast)
-$ivory: #F7F4ED;
-$ivory-200: #EFEADF;
+// Brand palette – sampled from the Amber Migration Services logo (blue globe, red wordmark)
+$navy: #0B2A55;
+$navy-800: #123A70;
+$navy-700: #1A4A8A;
+$red: #D8231A;
+$red-600: #B81C14;
+$red-ink: #B81C14;      // red for text on light backgrounds (AA contrast)
+$blue: #1556A0;          // logo globe blue
+$tint: #F3F6FB;
+$tint-200: #E4EBF5;
 $white: #FFFFFF;
 $charcoal: #242A33;
 $muted: #8A9099;          // decorative only (below AA for small text)
-$muted-ink: #5B626C;      // secondary text, AA on white & ivory
+$muted-ink: #5B626C;      // secondary text, AA on white & tint
 
 // Breakpoints (mobile-first)
 $bp: (
@@ -29,18 +30,22 @@ $bp: (
   --c-navy: #{$navy};
   --c-navy-800: #{$navy-800};
   --c-navy-700: #{$navy-700};
-  --c-amber: #{$amber};
-  --c-amber-600: #{$amber-600};
-  --c-amber-ink: #{$amber-ink};
-  --c-ivory: #{$ivory};
-  --c-ivory-200: #{$ivory-200};
+  --c-red: #{$red};
+  --c-red-600: #{$red-600};
+  --c-red-ink: #{$red-ink};
+  --c-red-light: #FF7B70;   // red for text/icons on navy (AA contrast)
+  --c-blue: #{$blue};
+  --c-blue-light: #E8F0FA;
+  --c-on-red: #FFFFFF;
+  --c-tint: #{$tint};
+  --c-tint-200: #{$tint-200};
   --c-white: #{$white};
   --c-text: #{$charcoal};
   --c-muted: #{$muted};
   --c-muted-ink: #{$muted-ink};
-  --c-line: rgba(16, 30, 50, 0.12);
-  --c-line-strong: rgba(16, 30, 50, 0.22);
-  --c-line-inverse: rgba(247, 244, 237, 0.14);
+  --c-line: rgba(11, 42, 85, 0.12);
+  --c-line-strong: rgba(11, 42, 85, 0.22);
+  --c-line-inverse: rgba(243, 246, 251, 0.14);
 
   // Type
   --f-display: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -74,7 +79,7 @@ $bp: (
   --dur-base: 350ms;
   --dur-reveal: 700ms;
 
-  --shadow-sm: 0 1px 2px rgba(16, 30, 50, 0.06), 0 2px 8px rgba(16, 30, 50, 0.04);
-  --shadow-md: 0 12px 32px -12px rgba(16, 30, 50, 0.18);
-  --shadow-lg: 0 30px 60px -24px rgba(16, 30, 50, 0.28);
+  --shadow-sm: 0 1px 2px rgba(11, 42, 85, 0.06), 0 2px 8px rgba(11, 42, 85, 0.04);
+  --shadow-md: 0 12px 32px -12px rgba(11, 42, 85, 0.18);
+  --shadow-lg: 0 30px 60px -24px rgba(11, 42, 85, 0.28);
 }

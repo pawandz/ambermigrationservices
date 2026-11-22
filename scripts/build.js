@@ -51,7 +51,7 @@ function jsonLd(page) {
     name: site.name,
     description: 'Immigration consultancy offering personalised guidance for study, work, visitor, permanent residency, family and business migration.',
     url: site.siteUrl + '/',
-    logo: site.siteUrl + '/assets/logos/logo.svg',
+    logo: site.siteUrl + '/assets/logos/logo.png',
     image: site.siteUrl + '/assets/images/hero-traveler.webp',
     areaServed: ['Canada', 'Australia', 'United Kingdom', 'United States', 'New Zealand', 'Germany'],
   };
@@ -59,7 +59,8 @@ function jsonLd(page) {
   if (site.verified) {
     org.telephone = site.phoneHref;
     org.email = site.email;
-    org.address = { '@type': 'PostalAddress', streetAddress: site.addressLine1, addressLocality: site.addressLine2 };
+    org.address = { '@type': 'PostalAddress', ...(site.address || { streetAddress: site.addressLine1 }) };
+    if (site.mapsUrl) org.hasMap = site.mapsUrl;
     const sameAs = socialLinks.map(([, u]) => u);
     if (sameAs.length) org.sameAs = sameAs;
   }

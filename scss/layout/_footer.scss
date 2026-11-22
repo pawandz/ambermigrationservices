@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 
 .site-footer {
-  background: var(--c-navy); color: rgba(247, 244, 237, 0.7); font-size: 0.95rem;
+  background: var(--c-navy); color: rgba(243, 246, 251, 0.7); font-size: 0.95rem;
   padding-top: clamp(4rem, 3rem + 4vw, 7rem); position: relative; overflow: hidden;
 
   &__top {
@@ -13,17 +13,17 @@
     @include up(md) { grid-column: 1 / -1; }
     @include up(lg) { grid-column: auto; }
   }
-  h2 { font-family: var(--f-body); font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-amber); margin-bottom: 1.25rem; }
+  h2 { font-family: var(--f-body); font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-red-light); margin-bottom: 1.25rem; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
-  a { transition: color var(--dur-micro) var(--ease-out); @include hover { color: var(--c-ivory); } }
+  a { transition: color var(--dur-micro) var(--ease-out); @include hover { color: var(--c-tint); } }
   .contact-list {
     li { display: flex; gap: 0.75rem; align-items: flex-start; }
-    .icon { width: 18px; height: 18px; color: var(--c-amber); flex-shrink: 0; margin-top: 3px; }
+    .icon { width: 18px; height: 18px; color: var(--c-red-light); flex-shrink: 0; margin-top: 3px; }
   }
 
   &__disclaimer {
-    padding-block: 2rem; border-bottom: 1px solid var(--c-line-inverse); font-size: 0.82rem; line-height: 1.7; color: rgba(247, 244, 237, 0.6);
-    strong { color: rgba(247, 244, 237, 0.85); font-weight: 600; }
+    padding-block: 2rem; border-bottom: 1px solid var(--c-line-inverse); font-size: 0.82rem; line-height: 1.7; color: rgba(243, 246, 251, 0.6);
+    strong { color: rgba(243, 246, 251, 0.85); font-weight: 600; }
   }
   &__bottom {
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center;
@@ -32,15 +32,15 @@
   }
   &__wordmark {
     font-family: var(--f-display); font-weight: 800; letter-spacing: -0.06em; line-height: 0.8;
-    font-size: clamp(3.5rem, 1rem + 13vw, 15rem); color: rgba(247, 244, 237, 0.045);
+    font-size: clamp(3.5rem, 1rem + 13vw, 15rem); color: rgba(243, 246, 251, 0.045);
     white-space: nowrap; user-select: none; margin-bottom: -0.12em; text-align: center;
   }
 }
 
 .social { display: flex; gap: 0.6rem;
-  a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--c-line-inverse); color: var(--c-ivory);
+  a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--c-line-inverse); color: var(--c-tint);
     transition: background-color var(--dur-micro), border-color var(--dur-micro), color var(--dur-micro);
-    @include hover { background: var(--c-amber); border-color: var(--c-amber); color: var(--c-navy); }
+    @include hover { background: var(--c-red); border-color: var(--c-red); color: var(--c-on-red); }
   }
   .icon { width: 17px; height: 17px; }
 }
@@ -49,7 +49,7 @@
 .wa-float {
   position: fixed; right: clamp(14px, 2vw, 28px); bottom: clamp(14px, 2vw, 28px); z-index: 80;
   display: inline-flex; align-items: center; gap: 0.6rem; height: 54px; padding: 0 1.1rem 0 0.95rem; border-radius: 999px;
-  background: #1F8F55; color: #fff; font-weight: 600; font-size: 0.9rem; box-shadow: 0 14px 30px -10px rgba(16, 30, 50, 0.45);
+  background: #1F8F55; color: #fff; font-weight: 600; font-size: 0.9rem; box-shadow: 0 14px 30px -10px rgba(11, 42, 85, 0.45);
   transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-micro);
   .icon { width: 24px; height: 24px; }
   span { display: none; @include up(md) { display: inline; } }

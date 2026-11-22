@@ -29,14 +29,14 @@
         <a class="contact-method" href="tel:{{site.phoneHref}}"><span class="contact-method__icon">{{icon:phone}}</span><span><span class="contact-method__label">Call us</span><span class="contact-method__value">{{site.phoneDisplay}}</span></span></a>
         <a class="contact-method" href="https://wa.me/{{site.whatsappNumber}}?text={{site.whatsappMessageEncoded}}" target="_blank" rel="noopener"><span class="contact-method__icon">{{icon:whatsapp}}</span><span><span class="contact-method__label">WhatsApp</span><span class="contact-method__value">Message us</span></span></a>
         <a class="contact-method" href="mailto:{{site.email}}"><span class="contact-method__icon">{{icon:mail}}</span><span><span class="contact-method__label">Email</span><span class="contact-method__value">{{site.email}}</span></span></a>
-        <div class="contact-method"><span class="contact-method__icon">{{icon:map-pin}}</span><span><span class="contact-method__label">Office</span><span class="contact-method__value" style="font-size:1rem">{{site.addressLine1}}<br>{{site.addressLine2}}</span></span></div>
+        <a class="contact-method" href="{{site.mapsUrl}}" target="_blank" rel="noopener"><span class="contact-method__icon">{{icon:map-pin}}</span><span><span class="contact-method__label">Office · Chandigarh</span><span class="contact-method__value" style="font-size:1rem">{{site.addressLine1}}<br>{{site.addressLine2}}</span></span></a>
         <div class="contact-method"><span class="contact-method__icon">{{icon:clock}}</span><span><span class="contact-method__label">Office hours</span><span class="contact-method__value" style="font-size:1rem">{{site.officeHours}}</span></span></div>
       </div>
     </aside>
 
     <div class="panel" data-reveal="up">
       <h2 id="form-title" style="font-size:var(--fs-h3);margin-bottom:0.5rem">Book a consultation</h2>
-      <p style="color:var(--c-muted-ink);margin-bottom:2rem">Fields marked <span aria-hidden="true" style="color:var(--c-amber-ink)">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+      <p style="color:var(--c-muted-ink);margin-bottom:2rem">Fields marked <span aria-hidden="true" style="color:var(--c-red-ink)">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
 
       <form class="form" data-contact-form novalidate>
         <div class="form__row">
@@ -105,7 +105,7 @@
   </div>
 </section>
 
-<section class="section section--tight section--ivory" aria-label="Important information">
+<section class="section section--tight section--tint" aria-label="Important information">
   <div class="container container--narrow">
     <div class="notice" data-reveal="up">{{icon:info}}<p><strong>Independent consultancy.</strong> Amber Migration Services is not a government agency. Visa and immigration decisions are made solely by the relevant authorities, and no outcome or processing time can be guaranteed.</p></div>
   </div>

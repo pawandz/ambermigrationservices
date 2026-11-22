@@ -19,6 +19,7 @@ A premium, responsive, multi-page **static website** for Amber Migration Service
 ## Tech stack
 
 - **HTML5**: semantic, accessible markup, generated from `src/` by a tiny Node script
+- **Brand**: colours sampled from the official logo: navy `#0B2A55`, logo blue `#1556A0`, logo red `#D8231A` (`#B81C14` for small text)
 - **SCSS → CSS**: design tokens, modular partials (`scss/`), compiled to `css/main.css`
 - **JavaScript (ES6+)**: no framework, split into `navigation.js`, `components.js`, `animations.js`, `main.js`
 - **GSAP 3.13 + ScrollTrigger + SplitText**: motion system (vendored in `js/vendor/`)
@@ -48,7 +49,7 @@ All content stays visible without JavaScript, and animations switch off for `pre
 ├── js/                    ← main.js, navigation.js, components.js, animations.js, vendor/
 ├── assets/
 │   ├── images/            ← WebP photography + world-dots.svg
-│   └── logos/             ← logo.svg, favicon.svg (and the legacy logo for reference)
+│   └── logos/             ← logo.png (web), logo-original.png (master), favicon, apple-touch-icon
 └── scripts/
     ├── build.js           ← builds the HTML pages, sitemap and robots.txt
     └── build-map.mjs      ← regenerates the dotted world map from Natural Earth data
@@ -72,7 +73,7 @@ The site is also browsable directly from XAMPP at `http://localhost/ambermigrati
 
 ## Before going live: checklist
 
-1. **Business details**: open `site.config.json` and replace the placeholders (phone, WhatsApp number in international format without `+`, email, address, office hours, social links). Set `"verified": true` once checked; only then are contact details added to the structured data (JSON-LD). Run `npm run build`.
+1. **Business details**: all contact details live in `site.config.json` (phone, WhatsApp number in international format without `+`, email, address, office hours, social links). Contact details are added to the structured data (JSON-LD) only while `"verified"` is `true`. Run `npm run build` after any change.
 2. **Contact form**: a static site can't send email by itself. Create a form at [Formspree](https://formspree.io) (or another approved service) and put its endpoint URL in `formEndpoint`. Until then, the form validates input and hands the enquiry to the visitor's own email app. It says clearly that nothing has been sent yet and never shows a false success message.
 3. **Site URL**: set `siteUrl` to the final domain (used for canonical URLs, Open Graph, sitemap).
 4. **Testimonials**: the homepage shows client *commitments* until verified, consented testimonials are available. See the comment above the slider in `src/pages/index.html`.

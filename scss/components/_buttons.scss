@@ -4,7 +4,7 @@
 .icon--fill { fill: currentColor; stroke: none; }
 
 .btn {
-  --btn-bg: var(--c-navy); --btn-fg: var(--c-ivory); --btn-fill: var(--c-amber); --btn-fill-fg: var(--c-navy);
+  --btn-bg: var(--c-navy); --btn-fg: var(--c-white); --btn-fill: var(--c-red); --btn-fill-fg: var(--c-on-red);
   position: relative; isolation: isolate; overflow: hidden;
   display: inline-flex; align-items: center; gap: 0.65rem; min-height: 52px; padding: 0 1.15rem 0 1.5rem;
   border-radius: 999px; background: var(--btn-bg); color: var(--btn-fg);
@@ -29,14 +29,14 @@
   }
   &:active { transform: scale(0.98); }
 
-  &--amber { --btn-bg: var(--c-amber); --btn-fg: var(--c-navy); --btn-fill: var(--c-ivory); --btn-fill-fg: var(--c-navy);
-    .btn__arrow { background: var(--c-navy); color: var(--c-amber); }
+  &--red { --btn-bg: var(--c-red); --btn-fg: var(--c-on-red); --btn-fill: var(--c-white); --btn-fill-fg: var(--c-navy);
+    .btn__arrow { background: var(--c-white); color: var(--c-red); }
   }
-  &--light { --btn-bg: var(--c-ivory); --btn-fg: var(--c-navy); --btn-fill: var(--c-amber); --btn-fill-fg: var(--c-navy); }
+  &--light { --btn-bg: var(--c-white); --btn-fg: var(--c-navy); --btn-fill: var(--c-red); --btn-fill-fg: var(--c-on-red); }
   &--ghost {
-    --btn-bg: transparent; --btn-fg: var(--c-navy); --btn-fill: var(--c-navy); --btn-fill-fg: var(--c-ivory);
+    --btn-bg: transparent; --btn-fg: var(--c-navy); --btn-fill: var(--c-navy); --btn-fill-fg: var(--c-tint);
     box-shadow: inset 0 0 0 1.5px var(--c-line-strong); padding: 0 1.5rem;
-    .on-dark &, .is-dark & { --btn-fg: var(--c-ivory); --btn-fill: var(--c-ivory); --btn-fill-fg: var(--c-navy); box-shadow: inset 0 0 0 1.5px rgba(247, 244, 237, 0.35); }
+    .on-dark &, .is-dark & { --btn-fg: var(--c-tint); --btn-fill: var(--c-tint); --btn-fill-fg: var(--c-navy); box-shadow: inset 0 0 0 1.5px rgba(243, 246, 251, 0.35); }
   }
   &--sm { min-height: 44px; font-size: 0.875rem; padding: 0 0.6rem 0 1.15rem; .btn__arrow { width: 28px; height: 28px; } }
   &--block { width: 100%; justify-content: space-between; }
@@ -50,5 +50,5 @@
   transition: background-size var(--dur-base) var(--ease-out), color var(--dur-micro);
   .icon { width: 16px; height: 16px; transition: transform var(--dur-base) var(--ease-out); }
   @include hover { background-size: 100% 1.5px; .icon { transform: translateX(4px); } }
-  .on-dark &, .is-dark & { color: var(--c-ivory); }
+  .on-dark &, .is-dark & { color: var(--c-tint); }
 }

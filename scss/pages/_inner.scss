@@ -5,7 +5,7 @@
   display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0;
   a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1rem; border-radius: 999px; border: 1px solid var(--c-line-strong); font-size: 0.875rem; font-weight: 500; color: var(--c-navy);
     transition: background-color var(--dur-micro), color var(--dur-micro), border-color var(--dur-micro);
-    @include hover { background: var(--c-navy); color: var(--c-ivory); border-color: var(--c-navy); }
+    @include hover { background: var(--c-navy); color: var(--c-tint); border-color: var(--c-navy); }
     .icon { width: 16px; height: 16px; }
   }
 }
@@ -18,7 +18,7 @@
   }
   &__media { aspect-ratio: 5 / 4; }
   &__body { display: grid; gap: 1.4rem; justify-items: start; }
-  &__label { display: inline-flex; align-items: center; gap: 0.75rem; font-family: var(--f-display); font-weight: 700; font-size: 0.85rem; color: var(--c-amber-ink); letter-spacing: 0.04em;
+  &__label { display: inline-flex; align-items: center; gap: 0.75rem; font-family: var(--f-display); font-weight: 700; font-size: 0.85rem; color: var(--c-red-ink); letter-spacing: 0.04em;
     .icon { width: 22px; height: 22px; padding: 0; }
   }
   h2 { font-size: clamp(1.9rem, 1.4rem + 2vw, 3rem); max-width: 18ch; }
@@ -36,7 +36,7 @@
 .values { counter-reset: v; }
 .value {
   position: relative; padding: 2rem; border-radius: var(--radius); background: var(--c-white); border: 1px solid var(--c-line); display: grid; gap: 0.8rem; align-content: start;
-  &::before { counter-increment: v; content: "0" counter(v); font-family: var(--f-display); font-weight: 800; font-size: 0.85rem; color: var(--c-amber-ink); }
+  &::before { counter-increment: v; content: "0" counter(v); font-family: var(--f-display); font-weight: 800; font-size: 0.85rem; color: var(--c-red-ink); }
   h3 { font-size: 1.3rem; }
   p { color: var(--c-muted-ink); font-size: 0.95rem; }
 }
@@ -46,15 +46,15 @@
 .process-step {
   display: grid; gap: 1.5rem; padding: clamp(1.75rem, 1.25rem + 2vw, 3rem); border-radius: var(--radius-lg); background: var(--c-white); border: 1px solid var(--c-line);
   @include up(lg) { grid-template-columns: 140px 1fr 1fr; gap: 3rem; align-items: start; }
-  &__num { font-family: var(--f-display); font-weight: 800; font-size: clamp(3rem, 2rem + 3vw, 4.75rem); line-height: 0.9; color: var(--c-amber); letter-spacing: -0.05em; }
+  &__num { font-family: var(--f-display); font-weight: 800; font-size: clamp(3rem, 2rem + 3vw, 4.75rem); line-height: 0.9; color: var(--c-red); letter-spacing: -0.05em; }
   &__main { display: grid; gap: 1rem; h2 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.3rem); } p { color: var(--c-muted-ink); } }
   h3 { font-family: var(--f-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-muted-ink); margin-bottom: 0.9rem; }
   .check-list { font-size: 0.95rem; }
 }
 
 // ---------- 404 ----------
-.not-found { min-height: 100svh; display: grid; place-items: center; text-align: center; background: var(--c-ivory); padding: calc(var(--header-h) + 2rem) var(--gutter) 4rem;
-  &__code { font-family: var(--f-display); font-weight: 800; font-size: clamp(6rem, 3rem + 14vw, 14rem); line-height: 0.85; letter-spacing: -0.06em; color: var(--c-navy); span { color: var(--c-amber); } }
+.not-found { min-height: 100svh; display: grid; place-items: center; text-align: center; background: var(--c-tint); padding: calc(var(--header-h) + 2rem) var(--gutter) 4rem;
+  &__code { font-family: var(--f-display); font-weight: 800; font-size: clamp(6rem, 3rem + 14vw, 14rem); line-height: 0.85; letter-spacing: -0.06em; color: var(--c-navy); span { color: var(--c-red); } }
   .lead { max-width: 42ch; margin: 1.5rem auto 2rem; }
   .btn-group { justify-content: center; }
 }

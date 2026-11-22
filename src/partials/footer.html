@@ -2,10 +2,7 @@
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__about">
-        <a class="brand brand--inverse" href="index.html" aria-label="Amber Migration Services – home">
-          <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
-          <span class="brand__text"><span class="brand__name">Amber</span><span class="brand__sub">Migration Services</span></span>
-        </a>
+        <a class="brand brand--plate" href="index.html" aria-label="Amber Migration Services – home"><img class="brand__logo" src="assets/logos/logo.png" width="640" height="104" alt=""></a>
         <p>Personalised immigration guidance for students, professionals, families and visitors, with clear communication and structured application support from the first conversation onwards.</p>
         {{social}}
       </div>
@@ -47,7 +44,7 @@
         <ul class="contact-list">
           <li>{{icon:phone}}<a href="tel:{{site.phoneHref}}">{{site.phoneDisplay}}</a></li>
           <li>{{icon:mail}}<a href="mailto:{{site.email}}">{{site.email}}</a></li>
-          <li>{{icon:map-pin}}<span>{{site.addressLine1}}<br>{{site.addressLine2}}</span></li>
+          <li>{{icon:map-pin}}<a href="{{site.mapsUrl}}" target="_blank" rel="noopener">{{site.addressLine1}}<br>{{site.addressLine2}}</a></li>
           <li>{{icon:clock}}<span>{{site.officeHours}}</span></li>
         </ul>
       </div>

@@ -9,10 +9,10 @@
 }
 
 .section { padding-block: var(--section-y); position: relative; }
-.section--ivory { background: var(--c-ivory); }
-.section--dark { background: var(--c-navy); color: rgba(247, 244, 237, 0.78); }
-.section--dark h2, .section--dark h3, .section--dark h4 { color: var(--c-ivory); }
-.section--dark .lead { color: rgba(247, 244, 237, 0.72); }
+.section--tint { background: var(--c-tint); }
+.section--dark { background: var(--c-navy); color: rgba(243, 246, 251, 0.78); }
+.section--dark h2, .section--dark h3, .section--dark h4 { color: var(--c-tint); }
+.section--dark .lead { color: rgba(243, 246, 251, 0.72); }
 .section--tight { padding-block: calc(var(--section-y) * 0.6); }
 .section--flush-top { padding-top: 0; }
 
@@ -52,6 +52,6 @@
   > * + * { margin-top: 1.1em; }
   h2 { font-size: var(--fs-h3); margin-top: 2.2em; scroll-margin-top: calc(var(--header-h) + 24px); }
   h3 { font-size: var(--fs-h4); margin-top: 1.8em; }
-  ul { padding-left: 1.2em; li + li { margin-top: 0.4em; } li::marker { color: var(--c-amber); } }
-  a { color: var(--c-navy); text-decoration: underline; text-decoration-color: var(--c-amber); text-underline-offset: 3px; }
+  ul { padding-left: 1.2em; li + li { margin-top: 0.4em; } li::marker { color: var(--c-red); } }
+  a { color: var(--c-navy); text-decoration: underline; text-decoration-color: var(--c-red); text-underline-offset: 3px; }
 }
