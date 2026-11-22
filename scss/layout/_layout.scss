@@ -1,0 +1,57 @@
+@use "../abstracts/mixins" as *;
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  &--narrow { max-width: calc(var(--container-narrow) + var(--gutter) * 2); }
+}
+
+.section { padding-block: var(--section-y); position: relative; }
+.section--ivory { background: var(--c-ivory); }
+.section--dark { background: var(--c-navy); color: rgba(247, 244, 237, 0.78); }
+.section--dark h2, .section--dark h3, .section--dark h4 { color: var(--c-ivory); }
+.section--dark .lead { color: rgba(247, 244, 237, 0.72); }
+.section--tight { padding-block: calc(var(--section-y) * 0.6); }
+.section--flush-top { padding-top: 0; }
+
+.section-head {
+  display: grid; gap: 1.5rem; margin-bottom: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+  h2 { max-width: 16ch; }
+  .lead { max-width: 46ch; }
+  &__intro { display: grid; gap: 1.25rem; justify-items: start; }
+  @include up(lg) {
+    grid-template-columns: 1.25fr 1fr; align-items: end; gap: 4rem;
+  }
+  &--center {
+    text-align: center; justify-items: center;
+    @include up(lg) { grid-template-columns: 1fr; }
+    .section-head__intro { justify-items: center; }
+    h2 { max-width: 20ch; }
+  }
+}
+
+.grid { display: grid; gap: clamp(1rem, 0.6rem + 1.4vw, 1.75rem); }
+.grid--2 { @include up(md) { grid-template-columns: repeat(2, 1fr); } }
+.grid--3 { @include up(md) { grid-template-columns: repeat(2, 1fr); } @include up(lg) { grid-template-columns: repeat(3, 1fr); } }
+.grid--4 { @include up(sm) { grid-template-columns: repeat(2, 1fr); } @include up(lg) { grid-template-columns: repeat(4, 1fr); } }
+
+.split {
+  display: grid; gap: clamp(2.5rem, 2rem + 3vw, 6rem); align-items: center;
+  @include up(lg) {
+    grid-template-columns: 1fr 1fr;
+    &--wide-left { grid-template-columns: 1.15fr 1fr; }
+    &--wide-right { grid-template-columns: 1fr 1.15fr; }
+    &--top { align-items: start; }
+  }
+}
+
+.prose {
+  max-width: 72ch;
+  > * + * { margin-top: 1.1em; }
+  h2 { font-size: var(--fs-h3); margin-top: 2.2em; scroll-margin-top: calc(var(--header-h) + 24px); }
+  h3 { font-size: var(--fs-h4); margin-top: 1.8em; }
+  ul { padding-left: 1.2em; li + li { margin-top: 0.4em; } li::marker { color: var(--c-amber); } }
+  a { color: var(--c-navy); text-decoration: underline; text-decoration-color: var(--c-amber); text-underline-offset: 3px; }
+}

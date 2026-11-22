@@ -1,0 +1,74 @@
+<footer class="site-footer on-dark">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__about">
+        <a class="brand brand--inverse" href="index.html" aria-label="Amber Migration Services – home">
+          <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="brand__text"><span class="brand__name">Amber</span><span class="brand__sub">Migration Services</span></span>
+        </a>
+        <p>Personalised immigration guidance for students, professionals, families and visitors, with clear communication and structured application support from the first conversation onwards.</p>
+        {{social}}
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="process.html">Immigration Process</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="services.html#study-abroad">Study Abroad</a></li>
+          <li><a href="services.html#work-visas">Work Visas</a></li>
+          <li><a href="services.html#visitor-visas">Visitor &amp; Tourist Visas</a></li>
+          <li><a href="services.html#permanent-residency">Permanent Residency</a></li>
+          <li><a href="services.html#family-spouse">Family &amp; Spouse Migration</a></li>
+          <li><a href="services.html#business-investor">Business &amp; Investor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Destinations</h2>
+        <ul>
+          <li><a href="destinations.html#canada">Canada</a></li>
+          <li><a href="destinations.html#australia">Australia</a></li>
+          <li><a href="destinations.html#united-kingdom">United Kingdom</a></li>
+          <li><a href="destinations.html#united-states">United States</a></li>
+          <li><a href="destinations.html#new-zealand">New Zealand</a></li>
+          <li><a href="destinations.html#germany">Germany</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>{{icon:phone}}<a href="tel:{{site.phoneHref}}">{{site.phoneDisplay}}</a></li>
+          <li>{{icon:mail}}<a href="mailto:{{site.email}}">{{site.email}}</a></li>
+          <li>{{icon:map-pin}}<span>{{site.addressLine1}}<br>{{site.addressLine2}}</span></li>
+          <li>{{icon:clock}}<span>{{site.officeHours}}</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="site-footer__disclaimer">
+      <strong>Important:</strong> Amber Migration Services is a private immigration consultancy and is not affiliated with, or acting on behalf of, any government or immigration authority. We provide guidance and application support only. All visa and immigration decisions are made solely by the relevant authorities, and no outcome or processing time can be guaranteed. Requirements change frequently. Always confirm current rules on the official government website for your destination.
+    </p>
+
+    <div class="site-footer__bottom">
+      <p>© <span data-year>{{year}}</span> Amber Migration Services. All rights reserved.</p>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__wordmark" aria-hidden="true">Amber Migration</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/{{site.whatsappNumber}}?text={{site.whatsappMessageEncoded}}" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp (opens in a new tab)">
+  {{icon:whatsapp}}<span>WhatsApp us</span>
+</a>

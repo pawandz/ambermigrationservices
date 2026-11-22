@@ -1,0 +1,20 @@
+{
+  "name": "ambermigrationservices",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Amber Migration Services – static marketing website",
+  "scripts": {
+    "build": "npm run build:css && npm run build:html",
+    "build:css": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
+    "build:html": "node scripts/build.js",
+    "build:map": "node scripts/build-map.mjs",
+    "watch": "sass scss/main.scss css/main.css --watch --no-source-map",
+    "serve": "npx --yes http-server . -p 8080 -c-1"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "sass": "^1.77.8",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

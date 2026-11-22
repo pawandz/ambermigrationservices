@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page.title}}</title>
+  <meta name="description" content="{{page.description}}">
+  <meta name="robots" content="{{page.robots}}">
+  <link rel="canonical" href="{{page.url}}">
+  <meta name="theme-color" content="#101E32">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amber Migration Services">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:description" content="{{page.description}}">
+  <meta property="og:url" content="{{page.url}}">
+  <meta property="og:image" content="{{site.siteUrl}}/assets/images/{{page.ogImage}}">
+  <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap">
+  {{page.preload}}
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.replace('no-js','js');window.__amsFallback=setTimeout(function(){document.documentElement.classList.add('anim-off')},3500);</script>
+  {{jsonld}}
+</head>
+<body class="{{page.bodyClass}}" data-page="{{page.nav}}">
+{{icons}}
+{{header}}
+<main id="main">
+{{content}}
+</main>
+{{footer}}
+<script>window.AMS_CONFIG = {{clientConfig}};</script>
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/SplitText.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/navigation.js" defer></script>
+<script src="js/components.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

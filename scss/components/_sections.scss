@@ -1,0 +1,64 @@
+@use "../abstracts/mixins" as *;
+
+// ---------- Page hero (inner pages) ----------
+.page-hero {
+  position: relative; background: var(--c-ivory); padding-top: calc(var(--header-h) + clamp(3rem, 2rem + 4vw, 6rem)); padding-bottom: clamp(3rem, 2rem + 4vw, 5.5rem); overflow: hidden;
+  &__grid { display: grid; gap: 2.5rem; @include up(lg) { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 4rem; } }
+  &__content { display: grid; gap: 1.5rem; justify-items: start; }
+  h1 { font-size: clamp(2.5rem, 1.6rem + 3.8vw, 5rem); max-width: 14ch; }
+  .lead { max-width: 50ch; }
+  &__media { aspect-ratio: 5 / 4; border-radius: var(--radius-lg); overflow: hidden; @include up(lg) { aspect-ratio: 4 / 3.4; }
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+  &--simple h1 { max-width: 18ch; }
+}
+
+.breadcrumb {
+  ol { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; font-size: 0.85rem; color: var(--c-muted-ink); }
+  li + li::before { content: "/"; margin-right: 0.5rem; color: var(--c-muted); }
+  a { color: var(--c-navy); font-weight: 500; @include hover { text-decoration: underline; text-decoration-color: var(--c-amber); text-underline-offset: 3px; } }
+}
+
+// ---------- Final CTA ----------
+.cta-band {
+  position: relative; overflow: hidden; isolation: isolate; color: var(--c-ivory);
+  padding-block: clamp(5rem, 3rem + 8vw, 10rem); text-align: center;
+  margin: 0 clamp(0px, 1.5vw, 24px) clamp(0px, 1.5vw, 24px); border-radius: clamp(0px, 2vw, 32px);
+  &__bg { position: absolute; inset: -12% 0; z-index: -2; img { width: 100%; height: 100%; object-fit: cover; } }
+  &::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(16, 30, 50, 0.72), rgba(16, 30, 50, 0.88)); }
+  &__inner { display: grid; justify-items: center; gap: 1.5rem; }
+  h2 { color: var(--c-ivory); font-size: clamp(2.4rem, 1.4rem + 4.4vw, 5.75rem); max-width: 15ch; letter-spacing: -0.045em; line-height: 1; }
+  p { max-width: 48ch; font-size: var(--fs-lg); color: rgba(247, 244, 237, 0.82); }
+  .btn-group { justify-content: center; margin-top: 0.75rem; }
+}
+
+// ---------- Stat/fact strip (only non-numeric, verifiable facts) ----------
+.facts {
+  display: grid; gap: 1px; background: var(--c-line); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--c-line);
+  @include up(md) { grid-template-columns: repeat(3, 1fr); }
+  &__item { background: var(--c-white); padding: 1.75rem; display: grid; gap: 0.4rem;
+    strong { font-family: var(--f-display); font-size: 1.2rem; color: var(--c-navy); letter-spacing: -0.02em; }
+    span { font-size: 0.92rem; color: var(--c-muted-ink); }
+  }
+}
+
+// ---------- Contact ----------
+.contact-grid { display: grid; gap: 2.5rem; @include up(lg) { grid-template-columns: 1fr 1.35fr; gap: 4rem; align-items: start; } }
+.contact-card { display: grid; gap: 1.5rem; @include up(lg) { position: sticky; top: calc(var(--header-h) + 2rem); } }
+.contact-method {
+  display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; border-radius: var(--radius); background: var(--c-white); border: 1px solid var(--c-line);
+  transition: border-color var(--dur-micro), transform var(--dur-base) var(--ease-out);
+  &__icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--c-navy); color: var(--c-amber); .icon { width: 20px; height: 20px; } }
+  &__label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-muted-ink); }
+  &__value { display: block; font-family: var(--f-display); font-weight: 700; font-size: 1.1rem; color: var(--c-navy); letter-spacing: -0.02em; word-break: break-word; }
+  @at-root a#{&} { @include hover { border-color: var(--c-amber); transform: translateY(-2px); } }
+}
+
+// ---------- Legal ----------
+.legal-layout { display: grid; gap: 3rem; @include up(lg) { grid-template-columns: 260px 1fr; gap: 5rem; } }
+.toc { @include up(lg) { position: sticky; top: calc(var(--header-h) + 2rem); align-self: start; }
+  h2 { font-size: var(--fs-xs); font-family: var(--f-body); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-muted-ink); margin-bottom: 1rem; }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; border-left: 1.5px solid var(--c-line); }
+  a { display: block; padding: 0.35rem 0 0.35rem 1rem; margin-left: -1.5px; border-left: 1.5px solid transparent; font-size: 0.9rem; color: var(--c-muted-ink);
+    @include hover { color: var(--c-navy); border-color: var(--c-amber); } }
+}

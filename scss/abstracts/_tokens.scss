@@ -1,0 +1,80 @@
+// ==========================================================================
+// Design tokens – single source of truth for colour, type, space & motion
+// ==========================================================================
+
+// Brand palette
+$navy: #101E32;
+$navy-800: #17283F;
+$navy-700: #22354F;
+$amber: #D99A35;
+$amber-600: #C4862A;
+$amber-ink: #8A5A12;      // amber for text on light backgrounds (AA contrast)
+$ivory: #F7F4ED;
+$ivory-200: #EFEADF;
+$white: #FFFFFF;
+$charcoal: #242A33;
+$muted: #8A9099;          // decorative only (below AA for small text)
+$muted-ink: #5B626C;      // secondary text, AA on white & ivory
+
+// Breakpoints (mobile-first)
+$bp: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px
+);
+
+:root {
+  --c-navy: #{$navy};
+  --c-navy-800: #{$navy-800};
+  --c-navy-700: #{$navy-700};
+  --c-amber: #{$amber};
+  --c-amber-600: #{$amber-600};
+  --c-amber-ink: #{$amber-ink};
+  --c-ivory: #{$ivory};
+  --c-ivory-200: #{$ivory-200};
+  --c-white: #{$white};
+  --c-text: #{$charcoal};
+  --c-muted: #{$muted};
+  --c-muted-ink: #{$muted-ink};
+  --c-line: rgba(16, 30, 50, 0.12);
+  --c-line-strong: rgba(16, 30, 50, 0.22);
+  --c-line-inverse: rgba(247, 244, 237, 0.14);
+
+  // Type
+  --f-display: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Inter", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1.0625rem;
+  --fs-lg: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  --fs-h4: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --fs-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2.125rem);
+  --fs-h2: clamp(2.125rem, 1.55rem + 2.4vw, 3.75rem);
+  --fs-h1: clamp(2.625rem, 1.6rem + 4.2vw, 5.5rem);
+  --fs-mega: clamp(3rem, 1.4rem + 6.6vw, 7.5rem);
+
+  // Space
+  --gutter: clamp(1rem, 0.6rem + 1.8vw, 2.5rem);
+  --container: 1320px;
+  --container-narrow: 860px;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 9rem);
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --header-h: 84px;
+
+  // Motion tokens (mirrored in js/animations.js)
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --dur-micro: 200ms;
+  --dur-base: 350ms;
+  --dur-reveal: 700ms;
+
+  --shadow-sm: 0 1px 2px rgba(16, 30, 50, 0.06), 0 2px 8px rgba(16, 30, 50, 0.04);
+  --shadow-md: 0 12px 32px -12px rgba(16, 30, 50, 0.18);
+  --shadow-lg: 0 30px 60px -24px rgba(16, 30, 50, 0.28);
+}

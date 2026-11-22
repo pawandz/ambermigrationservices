@@ -1,0 +1,21 @@
+{
+  "_readme": "Business details used across every page. Replace the placeholder values with verified details, set \"verified\" to true, then run `npm run build`.",
+  "verified": false,
+  "siteUrl": "https://pawan1985chd.github.io/ambermigrationservices",
+  "name": "Amber Migration Services",
+  "tagline": "Immigration Consultancy",
+  "phoneDisplay": "+00 00000 00000",
+  "phoneHref": "+0000000000",
+  "whatsappNumber": "0000000000",
+  "whatsappMessage": "Hello Amber Migration Services, I would like to book a consultation.",
+  "email": "info@ambermigrationservices.com",
+  "addressLine1": "Office address to be confirmed",
+  "addressLine2": "City, State, Postcode",
+  "officeHours": "Mon – Sat · 10:00 – 18:00 (to be confirmed)",
+  "formEndpoint": "",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": ""
+  }
+}

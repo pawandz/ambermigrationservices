@@ -1,0 +1,94 @@
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Amber Migration Services – home">
+      <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="brand__text"><span class="brand__name">Amber</span><span class="brand__sub">Migration Services</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="index.html" data-nav="home">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="about.html" data-nav="about">About Us</a></li>
+        <li class="nav__item" data-dropdown>
+          <a class="nav__link" href="services.html" data-nav="services" aria-haspopup="true" aria-expanded="false" aria-controls="dd-services">Services {{icon:chevron-down}}</a>
+          <div class="dropdown" id="dd-services">
+            <a class="dropdown__link" href="services.html#study-abroad"><span class="dropdown__icon">{{icon:graduation}}</span><span><span class="dropdown__title">Study Abroad</span><span class="dropdown__desc">Course, admission &amp; student visa guidance</span></span></a>
+            <a class="dropdown__link" href="services.html#work-visas"><span class="dropdown__icon">{{icon:briefcase}}</span><span><span class="dropdown__title">Work Visas</span><span class="dropdown__desc">Skilled &amp; employer-sponsored pathways</span></span></a>
+            <a class="dropdown__link" href="services.html#visitor-visas"><span class="dropdown__icon">{{icon:plane}}</span><span><span class="dropdown__title">Visitor &amp; Tourist Visas</span><span class="dropdown__desc">Travel, family visits &amp; short stays</span></span></a>
+            <a class="dropdown__link" href="services.html#permanent-residency"><span class="dropdown__icon">{{icon:home}}</span><span><span class="dropdown__title">Permanent Residency</span><span class="dropdown__desc">Eligibility review &amp; PR applications</span></span></a>
+            <a class="dropdown__link" href="services.html#family-spouse"><span class="dropdown__icon">{{icon:heart}}</span><span><span class="dropdown__title">Family &amp; Spouse Migration</span><span class="dropdown__desc">Partner, spouse &amp; dependant visas</span></span></a>
+            <a class="dropdown__link" href="services.html#business-investor"><span class="dropdown__icon">{{icon:landmark}}</span><span><span class="dropdown__title">Business &amp; Investor</span><span class="dropdown__desc">Entrepreneur &amp; investment routes</span></span></a>
+            <a class="dropdown__link" href="services.html#documentation"><span class="dropdown__icon">{{icon:file}}</span><span><span class="dropdown__title">Documentation Assistance</span><span class="dropdown__desc">Checklists, reviews &amp; file preparation</span></span></a>
+            <a class="dropdown__link" href="services.html#consultation"><span class="dropdown__icon">{{icon:message}}</span><span><span class="dropdown__title">Immigration Consultation</span><span class="dropdown__desc">One-to-one pathway planning</span></span></a>
+            <div class="dropdown__footer"><span>Not sure which pathway fits?</span><a href="contact.html">Talk to an advisor {{icon:arrow-right}}</a></div>
+          </div>
+        </li>
+        <li class="nav__item" data-dropdown>
+          <a class="nav__link" href="destinations.html" data-nav="destinations" aria-haspopup="true" aria-expanded="false" aria-controls="dd-countries">Countries {{icon:chevron-down}}</a>
+          <div class="dropdown dropdown--countries" id="dd-countries">
+            <a class="dropdown__link" href="destinations.html#canada"><span class="dropdown__icon">CA</span><span><span class="dropdown__title">Canada</span><span class="dropdown__desc">Study, work, visit, PR &amp; family</span></span></a>
+            <a class="dropdown__link" href="destinations.html#australia"><span class="dropdown__icon">AU</span><span><span class="dropdown__title">Australia</span><span class="dropdown__desc">Study, skilled, visitor &amp; partner</span></span></a>
+            <a class="dropdown__link" href="destinations.html#united-kingdom"><span class="dropdown__icon">UK</span><span><span class="dropdown__title">United Kingdom</span><span class="dropdown__desc">Student, skilled worker &amp; visitor</span></span></a>
+            <a class="dropdown__link" href="destinations.html#united-states"><span class="dropdown__icon">US</span><span><span class="dropdown__title">United States</span><span class="dropdown__desc">Student &amp; visitor visa guidance</span></span></a>
+            <a class="dropdown__link" href="destinations.html#new-zealand"><span class="dropdown__icon">NZ</span><span><span class="dropdown__title">New Zealand</span><span class="dropdown__desc">Study, work, visitor &amp; partner</span></span></a>
+            <a class="dropdown__link" href="destinations.html#germany"><span class="dropdown__icon">DE</span><span><span class="dropdown__title">Germany</span><span class="dropdown__desc">Study &amp; skilled employment</span></span></a>
+            <div class="dropdown__footer"><span>Compare destinations side by side</span><a href="destinations.html">All countries {{icon:arrow-right}}</a></div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="process.html" data-nav="process">Immigration Process</a></li>
+        <li class="nav__item"><a class="nav__link" href="contact.html" data-nav="contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--sm" href="contact.html#book" data-magnetic>Book a Consultation {{arrow}}</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav aria-label="Mobile">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="index.html" data-nav="home">Home</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="about.html" data-nav="about">About Us</a></li>
+      <li class="mobile-menu__item">
+        <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-services" data-submenu-toggle>Services {{icon:plus}}</button>
+        <div class="mobile-menu__sub" id="mm-services"><ul>
+          <li><a href="services.html">All services</a></li>
+          <li><a href="services.html#study-abroad">Study Abroad</a></li>
+          <li><a href="services.html#work-visas">Work Visas</a></li>
+          <li><a href="services.html#visitor-visas">Visitor &amp; Tourist Visas</a></li>
+          <li><a href="services.html#permanent-residency">Permanent Residency</a></li>
+          <li><a href="services.html#family-spouse">Family &amp; Spouse Migration</a></li>
+          <li><a href="services.html#business-investor">Business &amp; Investor Immigration</a></li>
+          <li><a href="services.html#documentation">Visa Documentation Assistance</a></li>
+          <li><a href="services.html#consultation">Immigration Consultation</a></li>
+        </ul></div>
+      </li>
+      <li class="mobile-menu__item">
+        <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-countries" data-submenu-toggle>Countries {{icon:plus}}</button>
+        <div class="mobile-menu__sub" id="mm-countries"><ul>
+          <li><a href="destinations.html">All destinations</a></li>
+          <li><a href="destinations.html#canada">Canada</a></li>
+          <li><a href="destinations.html#australia">Australia</a></li>
+          <li><a href="destinations.html#united-kingdom">United Kingdom</a></li>
+          <li><a href="destinations.html#united-states">United States</a></li>
+          <li><a href="destinations.html#new-zealand">New Zealand</a></li>
+          <li><a href="destinations.html#germany">Germany</a></li>
+        </ul></div>
+      </li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="process.html" data-nav="process">Immigration Process</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="contact.html" data-nav="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu__footer">
+    <a href="tel:{{site.phoneHref}}">{{icon:phone}} {{site.phoneDisplay}}</a>
+    <a href="mailto:{{site.email}}">{{icon:mail}} {{site.email}}</a>
+    <a class="btn btn--amber btn--block" href="contact.html#book">Book a Consultation {{arrow}}</a>
+  </div>
+</div>
