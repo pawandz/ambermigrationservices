@@ -83,6 +83,7 @@ const footer = read('src/partials/footer.html');
 const icons = read('src/partials/icons.svg');
 const clientConfig = JSON.stringify({
   formEndpoint: site.formEndpoint || '',
+  formCc: site.formCc || '',
   email: site.email,
   phoneDisplay: site.phoneDisplay,
   phoneHref: site.phoneHref,

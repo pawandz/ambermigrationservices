@@ -193,16 +193,29 @@
         return;
       }
 
-      // Connected form service (Formspree, Netlify-compatible JSON endpoints, etc.)
+      // Connected form service. Default: FormSubmit AJAX endpoint (https://formsubmit.co),
+      // which emails the enquiry to the endpoint address and CCs `formCc`.
+      // Also works with Formspree-style JSON endpoints (extra underscore fields are ignored).
+      const payload = {
+        ...data,
+        _subject: `New consultation enquiry – ${data.name} (${data.service})`,
+        _template: 'table',
+        _captcha: 'false',
+      };
+      if (cfg.formCc) payload._cc = cfg.formCc;
+
       submit.disabled = true;
       submitLabel.textContent = 'Sending…';
       try {
         const res = await fetch(cfg.formEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(data),
+          body: JSON.stringify(payload),
         });
-        if (!res.ok) throw new Error(String(res.status));
+        const json = await res.json().catch(() => ({}));
+        // FormSubmit replies 200 with { success: "false", message } when it hasn't delivered
+        // (e.g. the form is awaiting activation), so check the body, not just the status.
+        if (!res.ok || String(json.success) === 'false') throw new Error(json.message || String(res.status));
         form.reset();
         fields.forEach((f) => f.removeAttribute('aria-invalid'));
         setStatus('success', '<strong>Thank you, your enquiry has been received.</strong> A member of our team will reply by email or phone. Submitting an enquiry does not create a client relationship or guarantee any immigration outcome.');

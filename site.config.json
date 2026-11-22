@@ -1,5 +1,6 @@
 {
   "_readme": "Business details used across every page. Edit, then run `npm run build`. Contact details are published in structured data (JSON-LD) only while \"verified\" is true.",
+  "_formNote": "Contact form delivery via FormSubmit (free). The first submission sends an activation email to the endpoint address; click the link once to activate. Afterwards you can replace the email in formEndpoint with the random alias FormSubmit provides, to keep the address out of the page source.",
   "verified": true,
   "siteUrl": "https://pawan1985chd.github.io/ambermigrationservices",
   "name": "Amber Migration Services",
@@ -20,10 +21,11 @@
   },
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Amber+Migration+Services+SCO+333-334+Sector+35-B+Chandigarh",
   "officeHours": "Opens 10:00 AM · please call ahead to confirm",
-  "formEndpoint": "",
+  "formEndpoint": "https://formsubmit.co/ajax/pawan1985chd@gmail.com",
   "social": {
     "facebook": "",
     "instagram": "",
     "linkedin": ""
-  }
+  },
+  "formCc": "dinesh.singh83@gmail.com"
 }
