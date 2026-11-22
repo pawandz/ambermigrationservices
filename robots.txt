@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pawan1985chd.github.io/ambermigrationservices/sitemap.xml
+Sitemap: https://pawandz.github.io/ambermigrationservices/sitemap.xml
